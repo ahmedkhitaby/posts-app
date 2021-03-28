@@ -1,0 +1,12 @@
+.card-details {
+  @apply p-4;
+}
+.card-details .card-title {
+  @apply text-3xl mb-2 text-primary;
+}
+.card-details .card-writer {
+  @apply text-xl mb-4 text-grey;
+}
+.card-details .card-body {
+  @apply text-lg ml-8;
+}

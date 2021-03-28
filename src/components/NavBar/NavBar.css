@@ -1,0 +1,6 @@
+.navbar {
+  @apply bg-primary text-2xl flex h-20 justify-between w-full text-white p-4;
+}
+.navbar .links {
+  @apply w-40 flex items-center justify-between;
+}

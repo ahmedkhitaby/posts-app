@@ -1,0 +1,6 @@
+.not-found {
+  @apply w-full flex flex-col  items-center text-3xl;
+}
+.not-found > a {
+  @apply text-primary;
+}

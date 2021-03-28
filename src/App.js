@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import CardList from "./components/CardList/CardList";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
+import NotFound from "./layout/NotFound/NotFound";
+import Home from "./layout/Home/Home";
+import Footer from "./components/Footer/Footer";
+import CardDetails from "./components/CardDetails/CardDetails";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar />
+      <div className="min-h-screen">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/posts/:id">
+            <CardDetails />
+          </Route>
+          <Route path="/posts">
+            <CardList />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </div>
+      <Footer />
+    </Router>
   );
 }
 
